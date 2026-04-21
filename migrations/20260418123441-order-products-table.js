@@ -1,4 +1,4 @@
-exports.up = function(db) {
+export const up = function(db) {
   return db.createTable('order_products', {
     id: { type: 'int', primaryKey: true, autoIncrement: true },
     quantity: { type: 'int', notNull: true },
@@ -25,6 +25,6 @@ exports.up = function(db) {
   });
 };
 
-exports.down = function(db) {
+export const down = function(db) {
   return db.dropTable('order_products');
 };

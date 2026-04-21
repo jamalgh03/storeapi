@@ -1,4 +1,4 @@
-exports.up = function(db) {
+export const up = function(db) {
   return db.createTable('users', {
     id: { type: 'int', primaryKey: true, autoIncrement: true },
     firstName: { type: 'string', length: 100 },
@@ -6,4 +6,7 @@ exports.up = function(db) {
     password: { type: 'string' }
   });
 };
-exports.down = function(db) { return db.dropTable('users'); };
+
+export const down = function(db) {
+  return db.dropTable('users');
+};
